@@ -3,6 +3,9 @@
  * @author Arthur Garcia Volpini
  */
 
+//uso do pacote colors
+const colors = require('colors')
+
 console.clear()  //limpar a tela 
-console.log("Palmeiras")
-console.log("Hello World")
+console.log("Palmeiras".green)
+console.log("Hello World".bgBlue.italic)
