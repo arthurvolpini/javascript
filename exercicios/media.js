@@ -1,26 +1,32 @@
 /**
- * Calculo da média de duas notas
+ * Calculo da média de 2 notas 
+ * 
  * @author Arthur Garcia Volpini
  */
 
-//importar o pacote readline-sync (input no console)
+//importar po pacote readline-sync 
 const input = require('readline-sync')
+const colors = require(`colors`) //pacote de cor
 
-//variáveis
+
+//Variáveis
 let nota1, nota2, media
 
 console.clear()
-console.log("cálculo da média")
-//captura da nota pelo pacote readline-sync
+console.log("calculo da media")
+// captura da nota pelo pacote readline-sync
 //entrada
 nota1 = Number(input.question("Digite a nota 1: "))
 nota2 = Number(input.question("Digite a nota 2: "))
-//processamento
-media = (nota1 +nota2) /2
-//saida
-console.log(`Média: ${media.toFixed(1)}`)
-
-
-
-
-
+//Processamneto
+media = (nota1 + nota2) / 2
+//saida 
+console.log(`Média: ${media.toFixed(2)}`)
+//exemplo da estrututa if - else if
+if (media < 2){
+    console.log("Reprovado".red)
+} else if (media >= 2 && media < 5 ) {
+console.log("RECUPERAÇÃO".yellow)
+} else {
+    console.log("Aprovado".green)
+}
