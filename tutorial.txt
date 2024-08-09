@@ -237,3 +237,66 @@ idade < 16 (Proibido)
 idade entre 18 e 70 incluindo (obrigatório)
 idade 16, 17 ou acima de 70 (opcional)
 desenvolva mo console do JS um app para verificar em função da idade a obrugação ou não de votar 
+________________________________________________________________________
+
+
+switch (jogador) {
+        case 'pedra':
+            switch (computador) {
+                case 'pedra':
+                    return "Empate!";
+                case 'papel':
+                    return "O computador venceu!";
+                case 'tesoura':
+                    return "Você venceu!";
+            }
+            break;
+        case 'papel':
+            switch (computador) {
+                case 'pedra':
+                    return "Você venceu!";
+                case 'papel':
+                    return "Empate!";
+                case 'tesoura':
+                    return "O computador venceu!";
+            }
+            break;
+        case 'tesoura':
+            switch (computador) {
+                case 'pedra':
+                    return "O computador venceu!";
+                case 'papel':
+                    return "Você venceu!";
+                case 'tesoura':
+                    return "Empate!";
+            }
+            break;
+        default:
+            return "Escolha inválida! Tente novamente.";
+    }
+
+
+ if (jogador === computador) {
+        return "Empate!";
+    } else if (jogador === 'pedra') {
+        if (computador === 'tesoura') {
+            return "Você venceu!";
+        } else {
+            return "O computador venceu!";
+        }
+    } else if (jogador === 'papel') {
+        if (computador === 'pedra') {
+            return "Você venceu!";
+        } else {
+            return "O computador venceu!";
+        }
+    } else if (jogador === 'tesoura') {
+        if (computador === 'papel') {
+            return "Você venceu!";
+        } else {
+            return "O computador venceu!";
+        }
+    } else {
+        return "Escolha inválida!";
+    }
+}
